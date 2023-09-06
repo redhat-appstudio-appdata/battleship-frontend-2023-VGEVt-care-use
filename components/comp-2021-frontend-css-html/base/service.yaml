@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: null
+  labels:
+    app.kubernetes.io/created-by: application-service
+    app.kubernetes.io/instance: comp-2021-frontend-css-html
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: comp-2021-frontend-css-html
+    app.kubernetes.io/part-of: battleship-frontend-2023
+  name: comp-2021-frontend-css-html
+spec:
+  ports:
+  - name: "3002"
+    port: 3002
+    targetPort: 3002
+  selector:
+    app.kubernetes.io/instance: comp-2021-frontend-css-html
+status:
+  loadBalancer: {}
